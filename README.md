@@ -112,7 +112,48 @@ This API is built using **ASP.NET Core**, **Entity Framework Core**, and **SQLit
    
    dotnet test
 
-   
+## Example
+
+Get portfolio by ID  
+
+API Endpoint: https://localhost:7019/api/Portfolios/1
+
+Result:
+<pre>{
+  "id": 1,
+  "name": "Default Portfolio",
+  "customerId": 1,
+  "customer": {
+    "id": 1,
+    "name": "John Doe"
+  },
+  "assets": [
+    {
+      "id": 1,
+      "portfolioId": 1,
+      "ticker": "AAPL",
+      "name": "Apple Inc",
+      "type": "Stock",
+      "transactions": []
+    },
+    {
+      "id": 2,
+      "portfolioId": 1,
+      "ticker": "UST10",
+      "name": "US Treasury 10Y",
+      "type": "Bond",
+      "transactions": []
+    },
+    {
+      "id": 3,
+      "portfolioId": 1,
+      "ticker": "SPY",
+      "name": "S&P 500 ETF",
+      "type": "Fund",
+      "transactions": []
+    }
+  ]
+}</pre>
 
 ## License
 This project is licensed under the MIT License.
