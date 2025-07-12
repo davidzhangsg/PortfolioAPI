@@ -1,0 +1,666 @@
+2025-07-12 00:59:50.046 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-12 00:59:50.122 +08:00 [DBG] Loaded hosting startup assembly PortfolioAPI
+2025-07-12 00:59:50.159 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/customers - application/json; charset=utf-8 24
+2025-07-12 00:59:50.165 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-12 00:59:50.176 +08:00 [DBG] 1 candidate(s) found for the request path '/api/customers'
+2025-07-12 00:59:50.177 +08:00 [DBG] Endpoint 'CustomersController.Create (PortfolioAPI)' with route pattern 'api/Customers' is valid for the request path '/api/customers'
+2025-07-12 00:59:50.177 +08:00 [DBG] Request matched endpoint 'CustomersController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.198 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.198 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-07-12 00:59:50.199 +08:00 [INF] Executing endpoint 'CustomersController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.208 +08:00 [INF] Route matched with {action = "Create", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CustomerDto]] Create(CustomerCreateDto) on controller CustomersController (PortfolioAPI).
+2025-07-12 00:59:50.209 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.209 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.210 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.210 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.210 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.211 +08:00 [DBG] Executing controller factory for controller CustomersController (PortfolioAPI)
+2025-07-12 00:59:50.325 +08:00 [DBG] Executed controller factory for controller CustomersController (PortfolioAPI)
+2025-07-12 00:59:50.329 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'CustomerCreateDto' ...
+2025-07-12 00:59:50.330 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'CustomerCreateDto' using the name '' in request data ...
+2025-07-12 00:59:50.331 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 00:59:50.335 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'CustomerCreateDto'
+2025-07-12 00:59:50.335 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'CustomerCreateDto'.
+2025-07-12 00:59:50.336 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'CustomerCreateDto'.
+2025-07-12 00:59:50.336 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'CustomerCreateDto' ...
+2025-07-12 00:59:50.339 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'CustomerCreateDto'.
+2025-07-12 00:59:50.341 +08:00 [INF] Creating a new customer with name Test Customer
+2025-07-12 00:59:50.370 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 00:59:50.371 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 00:59:50.371 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 00:59:50.371 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 00:59:50.371 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 00:59:50.372 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'CustomerDto'.
+2025-07-12 00:59:50.387 +08:00 [DBG] Found the endpoints ["CustomersController.Get (PortfolioAPI)"] for address (id=[2],action=[Get],controller=[Customers])
+2025-07-12 00:59:50.390 +08:00 [DBG] Successfully processed template api/Customers/{id} for CustomersController.Get (PortfolioAPI) resulting in /api/Customers/2 and 
+2025-07-12 00:59:50.390 +08:00 [DBG] Link generation succeeded for endpoints ["CustomersController.Get (PortfolioAPI)"] with result /api/Customers/2
+2025-07-12 00:59:50.398 +08:00 [INF] Executed action CustomersController.Create (PortfolioAPI) in 185.9455ms
+2025-07-12 00:59:50.399 +08:00 [INF] Executed endpoint 'CustomersController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.409 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/customers - 201 null application/json; charset=utf-8 253.2213ms
+2025-07-12 00:59:50.416 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/portfolios - application/json; charset=utf-8 40
+2025-07-12 00:59:50.417 +08:00 [DBG] 1 candidate(s) found for the request path '/api/portfolios'
+2025-07-12 00:59:50.417 +08:00 [DBG] Endpoint 'PortfoliosController.Create (PortfolioAPI)' with route pattern 'api/Portfolios' is valid for the request path '/api/portfolios'
+2025-07-12 00:59:50.417 +08:00 [DBG] Request matched endpoint 'PortfoliosController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.417 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.418 +08:00 [INF] Executing endpoint 'PortfoliosController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.420 +08:00 [INF] Route matched with {action = "Create", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PortfolioDto]] Create(PortfolioCreateDto) on controller PortfoliosController (PortfolioAPI).
+2025-07-12 00:59:50.421 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.421 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.421 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.421 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.421 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.421 +08:00 [DBG] Executing controller factory for controller PortfoliosController (PortfolioAPI)
+2025-07-12 00:59:50.421 +08:00 [DBG] Executed controller factory for controller PortfoliosController (PortfolioAPI)
+2025-07-12 00:59:50.422 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'PortfolioCreateDto' ...
+2025-07-12 00:59:50.422 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'PortfolioCreateDto' using the name '' in request data ...
+2025-07-12 00:59:50.422 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 00:59:50.423 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'PortfolioCreateDto'
+2025-07-12 00:59:50.423 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'PortfolioCreateDto'.
+2025-07-12 00:59:50.423 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'PortfolioCreateDto'.
+2025-07-12 00:59:50.423 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'PortfolioCreateDto' ...
+2025-07-12 00:59:50.424 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'PortfolioCreateDto'.
+2025-07-12 00:59:50.425 +08:00 [INF] Creating new portfolio with name Test Portfolio
+2025-07-12 00:59:50.432 +08:00 [INF] Created portfolio with ID 2
+2025-07-12 00:59:50.432 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 00:59:50.433 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 00:59:50.433 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 00:59:50.433 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 00:59:50.433 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 00:59:50.433 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'PortfolioDto'.
+2025-07-12 00:59:50.433 +08:00 [DBG] Found the endpoints ["PortfoliosController.Get (PortfolioAPI)"] for address (id=[2],action=[Get],controller=[Portfolios])
+2025-07-12 00:59:50.434 +08:00 [DBG] Successfully processed template api/Portfolios/{id} for PortfoliosController.Get (PortfolioAPI) resulting in /api/Portfolios/2 and 
+2025-07-12 00:59:50.434 +08:00 [DBG] Link generation succeeded for endpoints ["PortfoliosController.Get (PortfolioAPI)"] with result /api/Portfolios/2
+2025-07-12 00:59:50.446 +08:00 [INF] Executed action PortfoliosController.Create (PortfolioAPI) in 24.8157ms
+2025-07-12 00:59:50.446 +08:00 [INF] Executed endpoint 'PortfoliosController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.446 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/portfolios - 201 null application/json; charset=utf-8 30.547ms
+2025-07-12 00:59:50.452 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/assets/stock - application/json; charset=utf-8 123
+2025-07-12 00:59:50.452 +08:00 [DBG] 1 candidate(s) found for the request path '/api/assets/stock'
+2025-07-12 00:59:50.452 +08:00 [DBG] Endpoint 'AssetsController.CreateStock (PortfolioAPI)' with route pattern 'api/Assets/stock' is valid for the request path '/api/assets/stock'
+2025-07-12 00:59:50.452 +08:00 [DBG] Request matched endpoint 'AssetsController.CreateStock (PortfolioAPI)'
+2025-07-12 00:59:50.453 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.453 +08:00 [INF] Executing endpoint 'AssetsController.CreateStock (PortfolioAPI)'
+2025-07-12 00:59:50.456 +08:00 [INF] Route matched with {action = "CreateStock", controller = "Assets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StockDto]] CreateStock(StockCreateDto) on controller AssetsController (PortfolioAPI).
+2025-07-12 00:59:50.456 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.456 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.456 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.456 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.456 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.456 +08:00 [DBG] Executing controller factory for controller AssetsController (PortfolioAPI)
+2025-07-12 00:59:50.457 +08:00 [DBG] Executed controller factory for controller AssetsController (PortfolioAPI)
+2025-07-12 00:59:50.458 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'StockCreateDto' ...
+2025-07-12 00:59:50.458 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'StockCreateDto' using the name '' in request data ...
+2025-07-12 00:59:50.458 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 00:59:50.461 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'StockCreateDto'
+2025-07-12 00:59:50.461 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'StockCreateDto'.
+2025-07-12 00:59:50.461 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'StockCreateDto'.
+2025-07-12 00:59:50.461 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'StockCreateDto' ...
+2025-07-12 00:59:50.464 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'StockCreateDto'.
+2025-07-12 00:59:50.465 +08:00 [INF] Creating stock: {"Exchange":"NASDAQ","Sector":"Tech","DividendYield":1.5,"PortfolioId":2,"Ticker":"TST","Name":"Test Stock","Type":"Stock","$type":"StockCreateDto"}
+2025-07-12 00:59:50.473 +08:00 [INF] Created stock with ID 4
+2025-07-12 00:59:50.473 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 00:59:50.473 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 00:59:50.473 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 00:59:50.473 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 00:59:50.473 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 00:59:50.473 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'StockDto'.
+2025-07-12 00:59:50.473 +08:00 [DBG] Found the endpoints ["AssetsController.GetAsset (PortfolioAPI)"] for address (id=[4],action=[GetAsset],controller=[Assets])
+2025-07-12 00:59:50.474 +08:00 [DBG] Successfully processed template api/Assets/{id} for AssetsController.GetAsset (PortfolioAPI) resulting in /api/Assets/4 and 
+2025-07-12 00:59:50.474 +08:00 [DBG] Link generation succeeded for endpoints ["AssetsController.GetAsset (PortfolioAPI)"] with result /api/Assets/4
+2025-07-12 00:59:50.475 +08:00 [INF] Executed action AssetsController.CreateStock (PortfolioAPI) in 18.5663ms
+2025-07-12 00:59:50.475 +08:00 [INF] Executed endpoint 'AssetsController.CreateStock (PortfolioAPI)'
+2025-07-12 00:59:50.475 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/assets/stock - 201 null application/json; charset=utf-8 23.339ms
+2025-07-12 00:59:50.480 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/transactions - application/json; charset=utf-8 90
+2025-07-12 00:59:50.480 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions'
+2025-07-12 00:59:50.480 +08:00 [DBG] Endpoint 'TransactionsController.Create (PortfolioAPI)' with route pattern 'api/Transactions' is valid for the request path '/api/transactions'
+2025-07-12 00:59:50.480 +08:00 [DBG] Request matched endpoint 'TransactionsController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.480 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.480 +08:00 [INF] Executing endpoint 'TransactionsController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.483 +08:00 [INF] Route matched with {action = "Create", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionDto]] Create(TransactionCreateDto) on controller TransactionsController (PortfolioAPI).
+2025-07-12 00:59:50.483 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.483 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.483 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.483 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.483 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.483 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.485 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.485 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionCreateDto' ...
+2025-07-12 00:59:50.485 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionCreateDto' using the name '' in request data ...
+2025-07-12 00:59:50.485 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 00:59:50.488 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'TransactionCreateDto'
+2025-07-12 00:59:50.488 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionCreateDto'.
+2025-07-12 00:59:50.488 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionCreateDto'.
+2025-07-12 00:59:50.488 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'TransactionCreateDto' ...
+2025-07-12 00:59:50.489 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'TransactionCreateDto'.
+2025-07-12 00:59:50.490 +08:00 [INF] Attempting to create transaction for Asset ID 4
+2025-07-12 00:59:50.559 +08:00 [INF] Created transaction ID 4 for Asset ID 4
+2025-07-12 00:59:50.559 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 00:59:50.560 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 00:59:50.560 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 00:59:50.560 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 00:59:50.560 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 00:59:50.560 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'TransactionDto'.
+2025-07-12 00:59:50.560 +08:00 [DBG] Found the endpoints ["TransactionsController.Get (PortfolioAPI)"] for address (id=[4],action=[Get],controller=[Transactions])
+2025-07-12 00:59:50.560 +08:00 [DBG] Successfully processed template api/Transactions/{id} for TransactionsController.Get (PortfolioAPI) resulting in /api/Transactions/4 and 
+2025-07-12 00:59:50.561 +08:00 [DBG] Link generation succeeded for endpoints ["TransactionsController.Get (PortfolioAPI)"] with result /api/Transactions/4
+2025-07-12 00:59:50.561 +08:00 [INF] Executed action TransactionsController.Create (PortfolioAPI) in 78.3499ms
+2025-07-12 00:59:50.562 +08:00 [INF] Executed endpoint 'TransactionsController.Create (PortfolioAPI)'
+2025-07-12 00:59:50.562 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/transactions - 201 null application/json; charset=utf-8 82.8432ms
+2025-07-12 00:59:50.568 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost/api/transactions/4 - application/json; charset=utf-8 78
+2025-07-12 00:59:50.568 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/4'
+2025-07-12 00:59:50.568 +08:00 [DBG] Endpoint 'TransactionsController.Update (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/4'
+2025-07-12 00:59:50.568 +08:00 [DBG] Request matched endpoint 'TransactionsController.Update (PortfolioAPI)'
+2025-07-12 00:59:50.568 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.569 +08:00 [INF] Executing endpoint 'TransactionsController.Update (PortfolioAPI)'
+2025-07-12 00:59:50.572 +08:00 [INF] Route matched with {action = "Update", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, TransactionUpdateDto) on controller TransactionsController (PortfolioAPI).
+2025-07-12 00:59:50.572 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.573 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.573 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.573 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.573 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.573 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.577 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.577 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-07-12 00:59:50.578 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-07-12 00:59:50.579 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:50.579 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:50.579 +08:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-07-12 00:59:50.579 +08:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:50.579 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionUpdateDto' ...
+2025-07-12 00:59:50.579 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionUpdateDto' using the name '' in request data ...
+2025-07-12 00:59:50.580 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 00:59:50.581 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'TransactionUpdateDto'
+2025-07-12 00:59:50.581 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionUpdateDto'.
+2025-07-12 00:59:50.581 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionUpdateDto'.
+2025-07-12 00:59:50.581 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'TransactionUpdateDto' ...
+2025-07-12 00:59:50.584 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'TransactionUpdateDto'.
+2025-07-12 00:59:50.585 +08:00 [INF] Updating transaction with ID 4
+2025-07-12 00:59:50.597 +08:00 [INF] Updated transaction with ID 4
+2025-07-12 00:59:50.599 +08:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-07-12 00:59:50.599 +08:00 [INF] Executed action TransactionsController.Update (PortfolioAPI) in 26.3342ms
+2025-07-12 00:59:50.599 +08:00 [INF] Executed endpoint 'TransactionsController.Update (PortfolioAPI)'
+2025-07-12 00:59:50.600 +08:00 [INF] Request finished HTTP/1.1 PUT http://localhost/api/transactions/4 - 204 null null 31.9758ms
+2025-07-12 00:59:50.602 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/transactions/4 - null null
+2025-07-12 00:59:50.602 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/4'
+2025-07-12 00:59:50.602 +08:00 [DBG] Endpoint 'TransactionsController.Get (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/4'
+2025-07-12 00:59:50.603 +08:00 [DBG] Request matched endpoint 'TransactionsController.Get (PortfolioAPI)'
+2025-07-12 00:59:50.605 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.605 +08:00 [INF] Executing endpoint 'TransactionsController.Get (PortfolioAPI)'
+2025-07-12 00:59:50.608 +08:00 [INF] Route matched with {action = "Get", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionDto]] Get(Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 00:59:50.608 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.608 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.608 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.608 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.608 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.608 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.608 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.609 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-07-12 00:59:50.609 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-07-12 00:59:50.609 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:50.609 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:50.609 +08:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-07-12 00:59:50.609 +08:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:50.610 +08:00 [INF] Fetching transaction with ID 4
+2025-07-12 00:59:50.613 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 00:59:50.613 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 00:59:50.613 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 00:59:50.613 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 00:59:50.613 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 00:59:50.613 +08:00 [INF] Executing OkObjectResult, writing value of type 'TransactionDto'.
+2025-07-12 00:59:50.613 +08:00 [INF] Executed action TransactionsController.Get (PortfolioAPI) in 5.171ms
+2025-07-12 00:59:50.613 +08:00 [INF] Executed endpoint 'TransactionsController.Get (PortfolioAPI)'
+2025-07-12 00:59:50.613 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/transactions/4 - 200 null application/json; charset=utf-8 11.5615ms
+2025-07-12 00:59:50.614 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/transactions/by-asset/4 - null null
+2025-07-12 00:59:50.615 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/by-asset/4'
+2025-07-12 00:59:50.615 +08:00 [DBG] Endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)' with route pattern 'api/Transactions/by-asset/{assetId}' is valid for the request path '/api/transactions/by-asset/4'
+2025-07-12 00:59:50.615 +08:00 [DBG] Request matched endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)'
+2025-07-12 00:59:50.615 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.615 +08:00 [INF] Executing endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)'
+2025-07-12 00:59:50.618 +08:00 [INF] Route matched with {action = "GetByAssetId", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TransactionDto]]] GetByAssetId(Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 00:59:50.618 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.618 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.618 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.618 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.618 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.618 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.619 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.619 +08:00 [DBG] Attempting to bind parameter 'assetId' of type 'System.Int32' ...
+2025-07-12 00:59:50.619 +08:00 [DBG] Attempting to bind parameter 'assetId' of type 'System.Int32' using the name 'assetId' in request data ...
+2025-07-12 00:59:50.619 +08:00 [DBG] Done attempting to bind parameter 'assetId' of type 'System.Int32'.
+2025-07-12 00:59:50.619 +08:00 [DBG] Done attempting to bind parameter 'assetId' of type 'System.Int32'.
+2025-07-12 00:59:50.619 +08:00 [DBG] Attempting to validate the bound parameter 'assetId' of type 'System.Int32' ...
+2025-07-12 00:59:50.619 +08:00 [DBG] Done attempting to validate the bound parameter 'assetId' of type 'System.Int32'.
+2025-07-12 00:59:50.620 +08:00 [INF] Fetching transactions for Asset ID 4
+2025-07-12 00:59:50.629 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 00:59:50.630 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 00:59:50.630 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 00:59:50.630 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 00:59:50.630 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 00:59:50.630 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TransactionDto, PortfolioAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-12 00:59:50.630 +08:00 [INF] Executed action TransactionsController.GetByAssetId (PortfolioAPI) in 11.8286ms
+2025-07-12 00:59:50.630 +08:00 [INF] Executed endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)'
+2025-07-12 00:59:50.631 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/transactions/by-asset/4 - 200 null application/json; charset=utf-8 16.6495ms
+2025-07-12 00:59:50.633 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/transactions/search?startDate=2020-01-01&endDate=2030-01-01&page=1&pageSize=5 - null null
+2025-07-12 00:59:50.633 +08:00 [DBG] 2 candidate(s) found for the request path '/api/transactions/search'
+2025-07-12 00:59:50.633 +08:00 [DBG] Endpoint 'TransactionsController.Search (PortfolioAPI)' with route pattern 'api/Transactions/search' is valid for the request path '/api/transactions/search'
+2025-07-12 00:59:50.633 +08:00 [DBG] Endpoint 'TransactionsController.Get (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/search'
+2025-07-12 00:59:50.633 +08:00 [DBG] Request matched endpoint 'TransactionsController.Search (PortfolioAPI)'
+2025-07-12 00:59:50.634 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:50.634 +08:00 [INF] Executing endpoint 'TransactionsController.Search (PortfolioAPI)'
+2025-07-12 00:59:50.636 +08:00 [INF] Route matched with {action = "Search", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Object]] Search(System.DateTime, System.DateTime, Int32, Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 00:59:50.636 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:50.636 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:50.636 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:50.636 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:50.637 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:50.637 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.637 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:50.639 +08:00 [DBG] Attempting to bind parameter 'startDate' of type 'System.DateTime' ...
+2025-07-12 00:59:50.640 +08:00 [DBG] Attempting to bind parameter 'startDate' of type 'System.DateTime' using the name 'startDate' in request data ...
+2025-07-12 00:59:50.640 +08:00 [DBG] Done attempting to bind parameter 'startDate' of type 'System.DateTime'.
+2025-07-12 00:59:50.640 +08:00 [DBG] Done attempting to bind parameter 'startDate' of type 'System.DateTime'.
+2025-07-12 00:59:50.640 +08:00 [DBG] Attempting to validate the bound parameter 'startDate' of type 'System.DateTime' ...
+2025-07-12 00:59:50.640 +08:00 [DBG] Done attempting to validate the bound parameter 'startDate' of type 'System.DateTime'.
+2025-07-12 00:59:50.640 +08:00 [DBG] Attempting to bind parameter 'endDate' of type 'System.DateTime' ...
+2025-07-12 00:59:50.641 +08:00 [DBG] Attempting to bind parameter 'endDate' of type 'System.DateTime' using the name 'endDate' in request data ...
+2025-07-12 00:59:50.641 +08:00 [DBG] Done attempting to bind parameter 'endDate' of type 'System.DateTime'.
+2025-07-12 00:59:50.641 +08:00 [DBG] Done attempting to bind parameter 'endDate' of type 'System.DateTime'.
+2025-07-12 00:59:50.641 +08:00 [DBG] Attempting to validate the bound parameter 'endDate' of type 'System.DateTime' ...
+2025-07-12 00:59:50.641 +08:00 [DBG] Done attempting to validate the bound parameter 'endDate' of type 'System.DateTime'.
+2025-07-12 00:59:50.641 +08:00 [DBG] Attempting to bind parameter 'page' of type 'System.Int32' ...
+2025-07-12 00:59:50.641 +08:00 [DBG] Attempting to bind parameter 'page' of type 'System.Int32' using the name 'page' in request data ...
+2025-07-12 00:59:50.641 +08:00 [DBG] Done attempting to bind parameter 'page' of type 'System.Int32'.
+2025-07-12 00:59:50.641 +08:00 [DBG] Done attempting to bind parameter 'page' of type 'System.Int32'.
+2025-07-12 00:59:50.641 +08:00 [DBG] Attempting to validate the bound parameter 'page' of type 'System.Int32' ...
+2025-07-12 00:59:50.641 +08:00 [DBG] Done attempting to validate the bound parameter 'page' of type 'System.Int32'.
+2025-07-12 00:59:50.641 +08:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+2025-07-12 00:59:50.641 +08:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+2025-07-12 00:59:50.642 +08:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2025-07-12 00:59:50.642 +08:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2025-07-12 00:59:50.642 +08:00 [DBG] Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+2025-07-12 00:59:50.642 +08:00 [DBG] Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+2025-07-12 00:59:50.642 +08:00 [INF] Searching transactions from "2020-01-01T00:00:00.0000000" to "2030-01-01T00:00:00.0000000", Page: 1, PageSize: 5
+2025-07-12 00:59:50.663 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 00:59:50.663 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 00:59:50.663 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 00:59:50.663 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 00:59:50.663 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 00:59:50.663 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[TransactionDto, PortfolioAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-12 00:59:50.665 +08:00 [INF] Executed action TransactionsController.Search (PortfolioAPI) in 28.2429ms
+2025-07-12 00:59:50.665 +08:00 [INF] Executed endpoint 'TransactionsController.Search (PortfolioAPI)'
+2025-07-12 00:59:50.666 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/transactions/search?startDate=2020-01-01&endDate=2030-01-01&page=1&pageSize=5 - 200 null application/json; charset=utf-8 32.4382ms
+2025-07-12 00:59:55.060 +08:00 [INF] Request starting HTTP/1.1 DELETE http://localhost/api/transactions/4 - null null
+2025-07-12 00:59:55.061 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/4'
+2025-07-12 00:59:55.061 +08:00 [DBG] Endpoint 'TransactionsController.Delete (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/4'
+2025-07-12 00:59:55.061 +08:00 [DBG] Request matched endpoint 'TransactionsController.Delete (PortfolioAPI)'
+2025-07-12 00:59:55.061 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 00:59:55.062 +08:00 [INF] Executing endpoint 'TransactionsController.Delete (PortfolioAPI)'
+2025-07-12 00:59:55.076 +08:00 [INF] Route matched with {action = "Delete", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 00:59:55.076 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 00:59:55.076 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 00:59:55.076 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 00:59:55.076 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 00:59:55.077 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 00:59:55.077 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:55.078 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 00:59:55.078 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-07-12 00:59:55.078 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-07-12 00:59:55.079 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:55.079 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:55.079 +08:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-07-12 00:59:55.079 +08:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-07-12 00:59:55.080 +08:00 [INF] Deleting transaction with ID 4
+2025-07-12 00:59:55.143 +08:00 [INF] Executed action TransactionsController.Delete (PortfolioAPI) in 66.3723ms
+2025-07-12 00:59:55.144 +08:00 [INF] Executed endpoint 'TransactionsController.Delete (PortfolioAPI)'
+2025-07-12 00:59:55.145 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot delete Transaction 4 because it is linked to Asset Test Stock.
+   at TransactionService.DeleteAsync(Int32 id) in C:\GIT\PortfolioAPI\PortfolioAPI\PortfolioAPI\Services\TransactionService.cs:line 56
+   at TransactionsController.Delete(Int32 id) in C:\GIT\PortfolioAPI\PortfolioAPI\PortfolioAPI\Controllers\TransactionController.cs:line 162
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-12 00:59:55.158 +08:00 [INF] Request finished HTTP/1.1 DELETE http://localhost/api/transactions/4 - 500 null text/plain; charset=utf-8 97.4413ms
+2025-07-12 01:01:47.371 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-12 01:01:47.437 +08:00 [DBG] Loaded hosting startup assembly PortfolioAPI
+2025-07-12 01:01:47.471 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/customers - application/json; charset=utf-8 24
+2025-07-12 01:01:47.477 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-12 01:01:47.487 +08:00 [DBG] 1 candidate(s) found for the request path '/api/customers'
+2025-07-12 01:01:47.489 +08:00 [DBG] Endpoint 'CustomersController.Create (PortfolioAPI)' with route pattern 'api/Customers' is valid for the request path '/api/customers'
+2025-07-12 01:01:47.490 +08:00 [DBG] Request matched endpoint 'CustomersController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.506 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.507 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-07-12 01:01:47.508 +08:00 [INF] Executing endpoint 'CustomersController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.517 +08:00 [INF] Route matched with {action = "Create", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CustomerDto]] Create(CustomerCreateDto) on controller CustomersController (PortfolioAPI).
+2025-07-12 01:01:47.518 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.518 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.519 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.519 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.519 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.520 +08:00 [DBG] Executing controller factory for controller CustomersController (PortfolioAPI)
+2025-07-12 01:01:47.631 +08:00 [DBG] Executed controller factory for controller CustomersController (PortfolioAPI)
+2025-07-12 01:01:47.633 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'CustomerCreateDto' ...
+2025-07-12 01:01:47.635 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'CustomerCreateDto' using the name '' in request data ...
+2025-07-12 01:01:47.635 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 01:01:47.641 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'CustomerCreateDto'
+2025-07-12 01:01:47.641 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'CustomerCreateDto'.
+2025-07-12 01:01:47.641 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'CustomerCreateDto'.
+2025-07-12 01:01:47.641 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'CustomerCreateDto' ...
+2025-07-12 01:01:47.645 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'CustomerCreateDto'.
+2025-07-12 01:01:47.648 +08:00 [INF] Creating a new customer with name Test Customer
+2025-07-12 01:01:47.677 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 01:01:47.678 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 01:01:47.678 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 01:01:47.678 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 01:01:47.678 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 01:01:47.679 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'CustomerDto'.
+2025-07-12 01:01:47.695 +08:00 [DBG] Found the endpoints ["CustomersController.Get (PortfolioAPI)"] for address (id=[2],action=[Get],controller=[Customers])
+2025-07-12 01:01:47.697 +08:00 [DBG] Successfully processed template api/Customers/{id} for CustomersController.Get (PortfolioAPI) resulting in /api/Customers/2 and 
+2025-07-12 01:01:47.697 +08:00 [DBG] Link generation succeeded for endpoints ["CustomersController.Get (PortfolioAPI)"] with result /api/Customers/2
+2025-07-12 01:01:47.707 +08:00 [INF] Executed action CustomersController.Create (PortfolioAPI) in 185.7798ms
+2025-07-12 01:01:47.708 +08:00 [INF] Executed endpoint 'CustomersController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.711 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/customers - 201 null application/json; charset=utf-8 242.8836ms
+2025-07-12 01:01:47.715 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/portfolios - application/json; charset=utf-8 40
+2025-07-12 01:01:47.716 +08:00 [DBG] 1 candidate(s) found for the request path '/api/portfolios'
+2025-07-12 01:01:47.716 +08:00 [DBG] Endpoint 'PortfoliosController.Create (PortfolioAPI)' with route pattern 'api/Portfolios' is valid for the request path '/api/portfolios'
+2025-07-12 01:01:47.716 +08:00 [DBG] Request matched endpoint 'PortfoliosController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.716 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.717 +08:00 [INF] Executing endpoint 'PortfoliosController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.720 +08:00 [INF] Route matched with {action = "Create", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PortfolioDto]] Create(PortfolioCreateDto) on controller PortfoliosController (PortfolioAPI).
+2025-07-12 01:01:47.720 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.720 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.720 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.720 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.720 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.720 +08:00 [DBG] Executing controller factory for controller PortfoliosController (PortfolioAPI)
+2025-07-12 01:01:47.721 +08:00 [DBG] Executed controller factory for controller PortfoliosController (PortfolioAPI)
+2025-07-12 01:01:47.721 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'PortfolioCreateDto' ...
+2025-07-12 01:01:47.721 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'PortfolioCreateDto' using the name '' in request data ...
+2025-07-12 01:01:47.722 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 01:01:47.722 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'PortfolioCreateDto'
+2025-07-12 01:01:47.723 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'PortfolioCreateDto'.
+2025-07-12 01:01:47.723 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'PortfolioCreateDto'.
+2025-07-12 01:01:47.723 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'PortfolioCreateDto' ...
+2025-07-12 01:01:47.724 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'PortfolioCreateDto'.
+2025-07-12 01:01:47.724 +08:00 [INF] Creating new portfolio with name Test Portfolio
+2025-07-12 01:01:47.731 +08:00 [INF] Created portfolio with ID 2
+2025-07-12 01:01:47.731 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 01:01:47.731 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 01:01:47.731 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 01:01:47.731 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 01:01:47.731 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 01:01:47.731 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'PortfolioDto'.
+2025-07-12 01:01:47.732 +08:00 [DBG] Found the endpoints ["PortfoliosController.Get (PortfolioAPI)"] for address (id=[2],action=[Get],controller=[Portfolios])
+2025-07-12 01:01:47.732 +08:00 [DBG] Successfully processed template api/Portfolios/{id} for PortfoliosController.Get (PortfolioAPI) resulting in /api/Portfolios/2 and 
+2025-07-12 01:01:47.732 +08:00 [DBG] Link generation succeeded for endpoints ["PortfoliosController.Get (PortfolioAPI)"] with result /api/Portfolios/2
+2025-07-12 01:01:47.743 +08:00 [INF] Executed action PortfoliosController.Create (PortfolioAPI) in 22.4447ms
+2025-07-12 01:01:47.743 +08:00 [INF] Executed endpoint 'PortfoliosController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.743 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/portfolios - 201 null application/json; charset=utf-8 28.2489ms
+2025-07-12 01:01:47.749 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/assets/stock - application/json; charset=utf-8 123
+2025-07-12 01:01:47.750 +08:00 [DBG] 1 candidate(s) found for the request path '/api/assets/stock'
+2025-07-12 01:01:47.750 +08:00 [DBG] Endpoint 'AssetsController.CreateStock (PortfolioAPI)' with route pattern 'api/Assets/stock' is valid for the request path '/api/assets/stock'
+2025-07-12 01:01:47.750 +08:00 [DBG] Request matched endpoint 'AssetsController.CreateStock (PortfolioAPI)'
+2025-07-12 01:01:47.751 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.751 +08:00 [INF] Executing endpoint 'AssetsController.CreateStock (PortfolioAPI)'
+2025-07-12 01:01:47.754 +08:00 [INF] Route matched with {action = "CreateStock", controller = "Assets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StockDto]] CreateStock(StockCreateDto) on controller AssetsController (PortfolioAPI).
+2025-07-12 01:01:47.754 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.754 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.754 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.754 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.755 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.755 +08:00 [DBG] Executing controller factory for controller AssetsController (PortfolioAPI)
+2025-07-12 01:01:47.756 +08:00 [DBG] Executed controller factory for controller AssetsController (PortfolioAPI)
+2025-07-12 01:01:47.756 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'StockCreateDto' ...
+2025-07-12 01:01:47.756 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'StockCreateDto' using the name '' in request data ...
+2025-07-12 01:01:47.756 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 01:01:47.759 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'StockCreateDto'
+2025-07-12 01:01:47.759 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'StockCreateDto'.
+2025-07-12 01:01:47.759 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'StockCreateDto'.
+2025-07-12 01:01:47.759 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'StockCreateDto' ...
+2025-07-12 01:01:47.763 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'StockCreateDto'.
+2025-07-12 01:01:47.764 +08:00 [INF] Creating stock: {"Exchange":"NASDAQ","Sector":"Tech","DividendYield":1.5,"PortfolioId":2,"Ticker":"TST","Name":"Test Stock","Type":"Stock","$type":"StockCreateDto"}
+2025-07-12 01:01:47.770 +08:00 [INF] Created stock with ID 4
+2025-07-12 01:01:47.770 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 01:01:47.771 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 01:01:47.771 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 01:01:47.771 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 01:01:47.771 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 01:01:47.771 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'StockDto'.
+2025-07-12 01:01:47.771 +08:00 [DBG] Found the endpoints ["AssetsController.GetAsset (PortfolioAPI)"] for address (id=[4],action=[GetAsset],controller=[Assets])
+2025-07-12 01:01:47.771 +08:00 [DBG] Successfully processed template api/Assets/{id} for AssetsController.GetAsset (PortfolioAPI) resulting in /api/Assets/4 and 
+2025-07-12 01:01:47.771 +08:00 [DBG] Link generation succeeded for endpoints ["AssetsController.GetAsset (PortfolioAPI)"] with result /api/Assets/4
+2025-07-12 01:01:47.772 +08:00 [INF] Executed action AssetsController.CreateStock (PortfolioAPI) in 17.5623ms
+2025-07-12 01:01:47.772 +08:00 [INF] Executed endpoint 'AssetsController.CreateStock (PortfolioAPI)'
+2025-07-12 01:01:47.773 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/assets/stock - 201 null application/json; charset=utf-8 23.6258ms
+2025-07-12 01:01:47.777 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/transactions - application/json; charset=utf-8 90
+2025-07-12 01:01:47.777 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions'
+2025-07-12 01:01:47.777 +08:00 [DBG] Endpoint 'TransactionsController.Create (PortfolioAPI)' with route pattern 'api/Transactions' is valid for the request path '/api/transactions'
+2025-07-12 01:01:47.777 +08:00 [DBG] Request matched endpoint 'TransactionsController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.777 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.777 +08:00 [INF] Executing endpoint 'TransactionsController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.780 +08:00 [INF] Route matched with {action = "Create", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionDto]] Create(TransactionCreateDto) on controller TransactionsController (PortfolioAPI).
+2025-07-12 01:01:47.780 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.780 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.780 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.780 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.780 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.780 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.781 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.781 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionCreateDto' ...
+2025-07-12 01:01:47.781 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionCreateDto' using the name '' in request data ...
+2025-07-12 01:01:47.781 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 01:01:47.784 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'TransactionCreateDto'
+2025-07-12 01:01:47.784 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionCreateDto'.
+2025-07-12 01:01:47.784 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionCreateDto'.
+2025-07-12 01:01:47.784 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'TransactionCreateDto' ...
+2025-07-12 01:01:47.785 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'TransactionCreateDto'.
+2025-07-12 01:01:47.785 +08:00 [INF] Attempting to create transaction for Asset ID 4
+2025-07-12 01:01:47.858 +08:00 [INF] Created transaction ID 4 for Asset ID 4
+2025-07-12 01:01:47.858 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 01:01:47.858 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 01:01:47.858 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 01:01:47.858 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 01:01:47.858 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 01:01:47.858 +08:00 [INF] Executing CreatedAtActionResult, writing value of type 'TransactionDto'.
+2025-07-12 01:01:47.858 +08:00 [DBG] Found the endpoints ["TransactionsController.Get (PortfolioAPI)"] for address (id=[4],action=[Get],controller=[Transactions])
+2025-07-12 01:01:47.859 +08:00 [DBG] Successfully processed template api/Transactions/{id} for TransactionsController.Get (PortfolioAPI) resulting in /api/Transactions/4 and 
+2025-07-12 01:01:47.859 +08:00 [DBG] Link generation succeeded for endpoints ["TransactionsController.Get (PortfolioAPI)"] with result /api/Transactions/4
+2025-07-12 01:01:47.860 +08:00 [INF] Executed action TransactionsController.Create (PortfolioAPI) in 79.8791ms
+2025-07-12 01:01:47.860 +08:00 [INF] Executed endpoint 'TransactionsController.Create (PortfolioAPI)'
+2025-07-12 01:01:47.860 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/transactions - 201 null application/json; charset=utf-8 83.6598ms
+2025-07-12 01:01:47.864 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost/api/transactions/4 - application/json; charset=utf-8 76
+2025-07-12 01:01:47.865 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/4'
+2025-07-12 01:01:47.865 +08:00 [DBG] Endpoint 'TransactionsController.Update (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/4'
+2025-07-12 01:01:47.865 +08:00 [DBG] Request matched endpoint 'TransactionsController.Update (PortfolioAPI)'
+2025-07-12 01:01:47.865 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.865 +08:00 [INF] Executing endpoint 'TransactionsController.Update (PortfolioAPI)'
+2025-07-12 01:01:47.868 +08:00 [INF] Route matched with {action = "Update", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, TransactionUpdateDto) on controller TransactionsController (PortfolioAPI).
+2025-07-12 01:01:47.868 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.868 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.868 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.868 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.868 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.868 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.872 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.872 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-07-12 01:01:47.873 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-07-12 01:01:47.873 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 01:01:47.873 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 01:01:47.873 +08:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-07-12 01:01:47.874 +08:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-07-12 01:01:47.874 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionUpdateDto' ...
+2025-07-12 01:01:47.874 +08:00 [DBG] Attempting to bind parameter 'dto' of type 'TransactionUpdateDto' using the name '' in request data ...
+2025-07-12 01:01:47.874 +08:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json; charset=utf-8'.
+2025-07-12 01:01:47.875 +08:00 [DBG] JSON input formatter succeeded, deserializing to type 'TransactionUpdateDto'
+2025-07-12 01:01:47.875 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionUpdateDto'.
+2025-07-12 01:01:47.875 +08:00 [DBG] Done attempting to bind parameter 'dto' of type 'TransactionUpdateDto'.
+2025-07-12 01:01:47.876 +08:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'TransactionUpdateDto' ...
+2025-07-12 01:01:47.877 +08:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'TransactionUpdateDto'.
+2025-07-12 01:01:47.878 +08:00 [INF] Updating transaction with ID 4
+2025-07-12 01:01:47.891 +08:00 [INF] Updated transaction with ID 4
+2025-07-12 01:01:47.893 +08:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-07-12 01:01:47.893 +08:00 [INF] Executed action TransactionsController.Update (PortfolioAPI) in 25.1581ms
+2025-07-12 01:01:47.893 +08:00 [INF] Executed endpoint 'TransactionsController.Update (PortfolioAPI)'
+2025-07-12 01:01:47.894 +08:00 [INF] Request finished HTTP/1.1 PUT http://localhost/api/transactions/4 - 204 null null 29.2817ms
+2025-07-12 01:01:47.896 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/transactions/4 - null null
+2025-07-12 01:01:47.896 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/4'
+2025-07-12 01:01:47.896 +08:00 [DBG] Endpoint 'TransactionsController.Get (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/4'
+2025-07-12 01:01:47.896 +08:00 [DBG] Request matched endpoint 'TransactionsController.Get (PortfolioAPI)'
+2025-07-12 01:01:47.899 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.899 +08:00 [INF] Executing endpoint 'TransactionsController.Get (PortfolioAPI)'
+2025-07-12 01:01:47.901 +08:00 [INF] Route matched with {action = "Get", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionDto]] Get(Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 01:01:47.901 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.901 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.901 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.901 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.901 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.901 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.902 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.902 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-07-12 01:01:47.902 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-07-12 01:01:47.902 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 01:01:47.902 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 01:01:47.902 +08:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-07-12 01:01:47.902 +08:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-07-12 01:01:47.903 +08:00 [INF] Fetching transaction with ID 4
+2025-07-12 01:01:47.906 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 01:01:47.906 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 01:01:47.906 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 01:01:47.906 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 01:01:47.906 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 01:01:47.906 +08:00 [INF] Executing OkObjectResult, writing value of type 'TransactionDto'.
+2025-07-12 01:01:47.906 +08:00 [INF] Executed action TransactionsController.Get (PortfolioAPI) in 4.7762ms
+2025-07-12 01:01:47.906 +08:00 [INF] Executed endpoint 'TransactionsController.Get (PortfolioAPI)'
+2025-07-12 01:01:47.907 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/transactions/4 - 200 null application/json; charset=utf-8 11.1757ms
+2025-07-12 01:01:47.907 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/transactions/by-asset/4 - null null
+2025-07-12 01:01:47.907 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/by-asset/4'
+2025-07-12 01:01:47.907 +08:00 [DBG] Endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)' with route pattern 'api/Transactions/by-asset/{assetId}' is valid for the request path '/api/transactions/by-asset/4'
+2025-07-12 01:01:47.907 +08:00 [DBG] Request matched endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)'
+2025-07-12 01:01:47.908 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.908 +08:00 [INF] Executing endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)'
+2025-07-12 01:01:47.910 +08:00 [INF] Route matched with {action = "GetByAssetId", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TransactionDto]]] GetByAssetId(Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 01:01:47.911 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.911 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.911 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.911 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.911 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.911 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.911 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.912 +08:00 [DBG] Attempting to bind parameter 'assetId' of type 'System.Int32' ...
+2025-07-12 01:01:47.912 +08:00 [DBG] Attempting to bind parameter 'assetId' of type 'System.Int32' using the name 'assetId' in request data ...
+2025-07-12 01:01:47.912 +08:00 [DBG] Done attempting to bind parameter 'assetId' of type 'System.Int32'.
+2025-07-12 01:01:47.912 +08:00 [DBG] Done attempting to bind parameter 'assetId' of type 'System.Int32'.
+2025-07-12 01:01:47.912 +08:00 [DBG] Attempting to validate the bound parameter 'assetId' of type 'System.Int32' ...
+2025-07-12 01:01:47.912 +08:00 [DBG] Done attempting to validate the bound parameter 'assetId' of type 'System.Int32'.
+2025-07-12 01:01:47.913 +08:00 [INF] Fetching transactions for Asset ID 4
+2025-07-12 01:01:47.922 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 01:01:47.922 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 01:01:47.922 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 01:01:47.922 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 01:01:47.922 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 01:01:47.922 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TransactionDto, PortfolioAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-12 01:01:47.922 +08:00 [INF] Executed action TransactionsController.GetByAssetId (PortfolioAPI) in 11.3698ms
+2025-07-12 01:01:47.922 +08:00 [INF] Executed endpoint 'TransactionsController.GetByAssetId (PortfolioAPI)'
+2025-07-12 01:01:47.923 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/transactions/by-asset/4 - 200 null application/json; charset=utf-8 15.4159ms
+2025-07-12 01:01:47.925 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/transactions/search?startDate=2020-01-01&endDate=2030-01-01&page=1&pageSize=5 - null null
+2025-07-12 01:01:47.925 +08:00 [DBG] 2 candidate(s) found for the request path '/api/transactions/search'
+2025-07-12 01:01:47.925 +08:00 [DBG] Endpoint 'TransactionsController.Search (PortfolioAPI)' with route pattern 'api/Transactions/search' is valid for the request path '/api/transactions/search'
+2025-07-12 01:01:47.925 +08:00 [DBG] Endpoint 'TransactionsController.Get (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/search'
+2025-07-12 01:01:47.925 +08:00 [DBG] Request matched endpoint 'TransactionsController.Search (PortfolioAPI)'
+2025-07-12 01:01:47.926 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:01:47.926 +08:00 [INF] Executing endpoint 'TransactionsController.Search (PortfolioAPI)'
+2025-07-12 01:01:47.928 +08:00 [INF] Route matched with {action = "Search", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Object]] Search(System.DateTime, System.DateTime, Int32, Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 01:01:47.928 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:01:47.929 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:01:47.929 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:01:47.929 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:01:47.929 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:01:47.929 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.929 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:01:47.931 +08:00 [DBG] Attempting to bind parameter 'startDate' of type 'System.DateTime' ...
+2025-07-12 01:01:47.932 +08:00 [DBG] Attempting to bind parameter 'startDate' of type 'System.DateTime' using the name 'startDate' in request data ...
+2025-07-12 01:01:47.932 +08:00 [DBG] Done attempting to bind parameter 'startDate' of type 'System.DateTime'.
+2025-07-12 01:01:47.932 +08:00 [DBG] Done attempting to bind parameter 'startDate' of type 'System.DateTime'.
+2025-07-12 01:01:47.932 +08:00 [DBG] Attempting to validate the bound parameter 'startDate' of type 'System.DateTime' ...
+2025-07-12 01:01:47.932 +08:00 [DBG] Done attempting to validate the bound parameter 'startDate' of type 'System.DateTime'.
+2025-07-12 01:01:47.932 +08:00 [DBG] Attempting to bind parameter 'endDate' of type 'System.DateTime' ...
+2025-07-12 01:01:47.932 +08:00 [DBG] Attempting to bind parameter 'endDate' of type 'System.DateTime' using the name 'endDate' in request data ...
+2025-07-12 01:01:47.932 +08:00 [DBG] Done attempting to bind parameter 'endDate' of type 'System.DateTime'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to bind parameter 'endDate' of type 'System.DateTime'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Attempting to validate the bound parameter 'endDate' of type 'System.DateTime' ...
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to validate the bound parameter 'endDate' of type 'System.DateTime'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Attempting to bind parameter 'page' of type 'System.Int32' ...
+2025-07-12 01:01:47.933 +08:00 [DBG] Attempting to bind parameter 'page' of type 'System.Int32' using the name 'page' in request data ...
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to bind parameter 'page' of type 'System.Int32'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to bind parameter 'page' of type 'System.Int32'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Attempting to validate the bound parameter 'page' of type 'System.Int32' ...
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to validate the bound parameter 'page' of type 'System.Int32'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+2025-07-12 01:01:47.933 +08:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2025-07-12 01:01:47.933 +08:00 [DBG] Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+2025-07-12 01:01:47.933 +08:00 [DBG] Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+2025-07-12 01:01:47.934 +08:00 [INF] Searching transactions from "2020-01-01T00:00:00.0000000" to "2030-01-01T00:00:00.0000000", Page: 1, PageSize: 5
+2025-07-12 01:01:47.955 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-12 01:01:47.955 +08:00 [DBG] No information found on request to perform content negotiation.
+2025-07-12 01:01:47.955 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-12 01:01:47.955 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-12 01:01:47.955 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-12 01:01:47.955 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[TransactionDto, PortfolioAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-12 01:01:47.957 +08:00 [INF] Executed action TransactionsController.Search (PortfolioAPI) in 28.3893ms
+2025-07-12 01:01:47.957 +08:00 [INF] Executed endpoint 'TransactionsController.Search (PortfolioAPI)'
+2025-07-12 01:01:47.958 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/transactions/search?startDate=2020-01-01&endDate=2030-01-01&page=1&pageSize=5 - 200 null application/json; charset=utf-8 32.753ms
+2025-07-12 01:02:11.816 +08:00 [INF] Request starting HTTP/1.1 DELETE http://localhost/api/transactions/4 - null null
+2025-07-12 01:02:11.816 +08:00 [DBG] 1 candidate(s) found for the request path '/api/transactions/4'
+2025-07-12 01:02:11.818 +08:00 [DBG] Endpoint 'TransactionsController.Delete (PortfolioAPI)' with route pattern 'api/Transactions/{id}' is valid for the request path '/api/transactions/4'
+2025-07-12 01:02:11.818 +08:00 [DBG] Request matched endpoint 'TransactionsController.Delete (PortfolioAPI)'
+2025-07-12 01:02:11.818 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-12 01:02:11.818 +08:00 [INF] Executing endpoint 'TransactionsController.Delete (PortfolioAPI)'
+2025-07-12 01:02:11.827 +08:00 [INF] Route matched with {action = "Delete", controller = "Transactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller TransactionsController (PortfolioAPI).
+2025-07-12 01:02:11.827 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-12 01:02:11.827 +08:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-12 01:02:11.827 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-12 01:02:11.827 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-12 01:02:11.827 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-12 01:02:11.827 +08:00 [DBG] Executing controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:02:11.828 +08:00 [DBG] Executed controller factory for controller TransactionsController (PortfolioAPI)
+2025-07-12 01:02:11.828 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-07-12 01:02:11.828 +08:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-07-12 01:02:11.828 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 01:02:11.828 +08:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-07-12 01:02:11.828 +08:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-07-12 01:02:11.828 +08:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-07-12 01:02:11.829 +08:00 [INF] Deleting transaction with ID 4
+2025-07-12 01:02:11.883 +08:00 [INF] Executed action TransactionsController.Delete (PortfolioAPI) in 55.2536ms
+2025-07-12 01:02:11.883 +08:00 [INF] Executed endpoint 'TransactionsController.Delete (PortfolioAPI)'
+2025-07-12 01:02:11.884 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot delete Transaction 4 because it is linked to Asset Test Stock.
+   at TransactionService.DeleteAsync(Int32 id) in C:\GIT\PortfolioAPI\PortfolioAPI\PortfolioAPI\Services\TransactionService.cs:line 56
+   at TransactionsController.Delete(Int32 id) in C:\GIT\PortfolioAPI\PortfolioAPI\PortfolioAPI\Controllers\TransactionController.cs:line 162
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-12 01:02:11.897 +08:00 [INF] Request finished HTTP/1.1 DELETE http://localhost/api/transactions/4 - 500 null text/plain; charset=utf-8 80.78ms

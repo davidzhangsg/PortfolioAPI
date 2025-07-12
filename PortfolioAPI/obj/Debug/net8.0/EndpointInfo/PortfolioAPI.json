@@ -1,0 +1,2080 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Portfolio API",
+    "description": "API for managing customers, portfolios, assets, transactions, and performance.",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Assets": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Retrieves all assets across all portfolios.",
+        "responses": {
+          "200": {
+            "description": "Returns all assets",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Assets/{id}": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Retrieves a single asset by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the asset",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If the asset is not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Updates an existing asset.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the asset to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated asset data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Asset updated successfully"
+          },
+          "404": {
+            "description": "If the asset is not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Deletes an asset by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the asset to delete.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Asset deleted successfully"
+          },
+          "400": {
+            "description": "If the asset has existing transactions"
+          },
+          "404": {
+            "description": "If the asset is not found"
+          }
+        }
+      }
+    },
+    "/api/Assets/by-portfolio/{portfolioId}": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Retrieves all assets belonging to a specific portfolio.",
+        "parameters": [
+          {
+            "name": "portfolioId",
+            "in": "path",
+            "description": "The unique identifier of the portfolio.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the list of assets",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetDto"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If no assets are found for the portfolio"
+          }
+        }
+      }
+    },
+    "/api/Assets/stock": {
+      "post": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Creates a new stock asset.",
+        "requestBody": {
+          "description": "The stock creation data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StockDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StockDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StockDto"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Returns the created stock"
+          }
+        }
+      }
+    },
+    "/api/Assets/bond": {
+      "post": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Creates a new bond asset.",
+        "requestBody": {
+          "description": "The bond creation data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BondCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BondCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BondCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondDto"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Returns the created bond"
+          }
+        }
+      }
+    },
+    "/api/Assets/fund": {
+      "post": {
+        "tags": [
+          "Assets"
+        ],
+        "summary": "Creates a new fund asset.",
+        "requestBody": {
+          "description": "The fund creation data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FundCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FundCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FundCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundDto"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Returns the created fund"
+          }
+        }
+      }
+    },
+    "/api/Customers": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieves all customers in the system.",
+        "responses": {
+          "200": {
+            "description": "Returns the list of customers",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Creates a new customer.",
+        "requestBody": {
+          "description": "The customer creation data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDto"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Returns the created customer"
+          }
+        }
+      }
+    },
+    "/api/Customers/{id}": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieves a specific customer by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the customer.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the customer",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If the customer is not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Updates an existing customer.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the customer to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated customer data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Customer updated successfully"
+          },
+          "404": {
+            "description": "If the customer is not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Deletes a customer by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the customer to delete.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Customer deleted successfully"
+          },
+          "404": {
+            "description": "If the customer is not found"
+          }
+        }
+      }
+    },
+    "/api/Customers/{id}/portfolios": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieves a customer along with their portfolios and associated assets.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the customer.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the customer with portfolios and assets",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPortfolioDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPortfolioDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPortfolioDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If the customer is not found"
+          }
+        }
+      }
+    },
+    "/api/portfolios/{portfolioId}/performance": {
+      "get": {
+        "tags": [
+          "Performance"
+        ],
+        "summary": "Retrieves the performance metrics for a specific portfolio within a date range.",
+        "parameters": [
+          {
+            "name": "portfolioId",
+            "in": "path",
+            "description": "The unique identifier of the portfolio.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "The start date of the performance period (inclusive).",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "The end date of the performance period (inclusive).",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the portfolio performance data",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerformanceDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerformanceDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerformanceDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If no performance data is found for the portfolio"
+          }
+        }
+      }
+    },
+    "/api/Portfolios": {
+      "get": {
+        "tags": [
+          "Portfolios"
+        ],
+        "summary": "Retrieves all portfolios.",
+        "responses": {
+          "200": {
+            "description": "Returns the list of portfolios",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PortfolioDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PortfolioDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PortfolioDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Portfolios"
+        ],
+        "summary": "Creates a new portfolio.",
+        "requestBody": {
+          "description": "The portfolio creation data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PortfolioCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PortfolioCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PortfolioCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioDto"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Returns the created portfolio"
+          },
+          "400": {
+            "description": "If the input data is invalid"
+          }
+        }
+      }
+    },
+    "/api/Portfolios/{id}": {
+      "get": {
+        "tags": [
+          "Portfolios"
+        ],
+        "summary": "Retrieves a specific portfolio by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the portfolio.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the portfolio details",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If the portfolio is not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Portfolios"
+        ],
+        "summary": "Updates an existing portfolio.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the portfolio.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated portfolio data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PortfolioUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PortfolioUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PortfolioUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Portfolio updated successfully"
+          },
+          "404": {
+            "description": "If the portfolio is not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Portfolios"
+        ],
+        "summary": "Deletes a portfolio by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the portfolio.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Portfolio deleted successfully"
+          },
+          "400": {
+            "description": "If the portfolio has linked assets"
+          },
+          "404": {
+            "description": "If the portfolio is not found"
+          }
+        }
+      }
+    },
+    "/api/Portfolios/by-customer/{customerId}": {
+      "get": {
+        "tags": [
+          "Portfolios"
+        ],
+        "summary": "Retrieves all portfolios for a specific customer, including their assets.",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "description": "The unique identifier of the customer.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the list of portfolios with assets",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PortfolioWithAssetsDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PortfolioWithAssetsDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PortfolioWithAssetsDto"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If no portfolios are found for the customer"
+          }
+        }
+      }
+    },
+    "/api/Transactions": {
+      "post": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Creates a new transaction.",
+        "requestBody": {
+          "description": "Transaction creation data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionDto"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Returns the newly created transaction"
+          },
+          "400": {
+            "description": "If the asset ID is invalid"
+          }
+        }
+      }
+    },
+    "/api/Transactions/{id}": {
+      "put": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Updates an existing transaction.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Transaction ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Updated transaction data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Transaction updated successfully"
+          },
+          "404": {
+            "description": "If the transaction is not found"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Gets a transaction by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Transaction ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the transaction",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If the transaction is not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Deletes a transaction by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Transaction ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "Transaction deleted successfully"
+          },
+          "404": {
+            "description": "If the transaction is not found"
+          }
+        }
+      }
+    },
+    "/api/Transactions/by-asset/{assetId}": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Gets all transactions for a specific asset.",
+        "parameters": [
+          {
+            "name": "assetId",
+            "in": "path",
+            "description": "Asset ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the list of transactions",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionDto"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "If no transactions are found for the asset"
+          }
+        }
+      }
+    },
+    "/api/Transactions/search": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Searches transactions within a date range with pagination support.",
+        "parameters": [
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "Start date of the search range.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "End date of the search range.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number (default 1).",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of records per page (default 10).",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns paginated transactions"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AssetAllocationDto": {
+        "type": "object",
+        "properties": {
+          "assetName": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "description": "Current value of the asset.",
+            "format": "double"
+          },
+          "allocationPercentage": {
+            "type": "number",
+            "description": "Percentage allocation of the asset in the total portfolio.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents asset allocation information within a portfolio."
+      },
+      "AssetDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier of the asset.",
+            "format": "int32"
+          },
+          "portfolioId": {
+            "type": "integer",
+            "description": "Identifier of the portfolio this asset belongs to.",
+            "format": "int32"
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the asset.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "Stock",
+              "Bond",
+              "Fund"
+            ],
+            "type": "string",
+            "description": "Type of the asset (e.g., Stock, Bond, Fund)."
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionDto"
+            },
+            "description": "Collection of all transactions (buys, sells) related to this asset.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Base DTO representing a general asset."
+      },
+      "AssetPerformanceDto": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "integer",
+            "description": "Unique identifier of the asset.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the asset.",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "description": "Current total value of the asset.",
+            "format": "double"
+          },
+          "realizedGain": {
+            "type": "number",
+            "description": "Total realized gain for the asset.",
+            "format": "double"
+          },
+          "unrealizedGain": {
+            "type": "number",
+            "description": "Total unrealized gain for the asset.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO representing the performance of an asset."
+      },
+      "BondCreateDto": {
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "type": "integer",
+            "description": "Portfolio ID to associate this asset with.",
+            "format": "int32"
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the asset.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "Stock",
+              "Bond",
+              "Fund"
+            ],
+            "type": "string",
+            "description": "Type of the asset."
+          },
+          "couponRate": {
+            "type": "number",
+            "description": "Coupon rate percentage of the bond.",
+            "format": "double"
+          },
+          "maturityDate": {
+            "type": "string",
+            "description": "Maturity date of the bond.",
+            "format": "date-time"
+          },
+          "issuer": {
+            "type": "string",
+            "description": "Issuer of the bond.",
+            "nullable": true
+          },
+          "bondType": {
+            "enum": [
+              "Government",
+              "Corporate",
+              "Municipal"
+            ],
+            "type": "string",
+            "description": "Type of bond."
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO for creating a bond asset."
+      },
+      "BondDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier of the asset.",
+            "format": "int32"
+          },
+          "portfolioId": {
+            "type": "integer",
+            "description": "Identifier of the portfolio this asset belongs to.",
+            "format": "int32"
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the asset.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "Stock",
+              "Bond",
+              "Fund"
+            ],
+            "type": "string",
+            "description": "Type of the asset (e.g., Stock, Bond, Fund)."
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionDto"
+            },
+            "description": "Collection of all transactions (buys, sells) related to this asset.",
+            "nullable": true
+          },
+          "couponRate": {
+            "type": "number",
+            "description": "Coupon rate percentage of the bond.",
+            "format": "double"
+          },
+          "maturityDate": {
+            "type": "string",
+            "description": "Maturity date of the bond.",
+            "format": "date-time"
+          },
+          "issuer": {
+            "type": "string",
+            "description": "Issuer of the bond.",
+            "nullable": true
+          },
+          "bondType": {
+            "enum": [
+              "Government",
+              "Corporate",
+              "Municipal"
+            ],
+            "type": "string",
+            "description": "Type of bond (e.g., Government, Corporate)."
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO representing a bond asset."
+      },
+      "CustomerCreateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the customer.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Data Transfer Object for creating a new customer."
+      },
+      "CustomerDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier of the customer.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the customer.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Data Transfer Object for returning customer details."
+      },
+      "CustomerPortfolioDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier of the customer.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the customer.",
+            "nullable": true
+          },
+          "portfolios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PortfolioWithAssetsDto"
+            },
+            "description": "List of portfolios owned by the customer, each including associated assets.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO representing a customer along with their investment portfolios and associated assets."
+      },
+      "CustomerUpdateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the customer.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Data Transfer Object for updating an existing customer."
+      },
+      "FundCreateDto": {
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "type": "integer",
+            "description": "Portfolio ID to associate this fund with.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the fund.",
+            "nullable": true
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the fund.",
+            "nullable": true
+          },
+          "fundType": {
+            "enum": [
+              "ETF",
+              "Mutual",
+              "Index",
+              "Hedge",
+              "Other"
+            ],
+            "type": "string",
+            "description": "Type of fund."
+          },
+          "expenseRatio": {
+            "type": "number",
+            "description": "Expense ratio percentage of the fund.",
+            "format": "double"
+          },
+          "fundManager": {
+            "type": "string",
+            "description": "Name of the fund manager.",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "Stock",
+              "Bond",
+              "Fund"
+            ],
+            "type": "string",
+            "description": "Type of asset, default is Fund."
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO for creating a fund asset."
+      },
+      "FundDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier of the asset.",
+            "format": "int32"
+          },
+          "portfolioId": {
+            "type": "integer",
+            "description": "Identifier of the portfolio this asset belongs to.",
+            "format": "int32"
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the asset.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "Stock",
+              "Bond",
+              "Fund"
+            ],
+            "type": "string",
+            "description": "Type of the asset (e.g., Stock, Bond, Fund)."
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionDto"
+            },
+            "description": "Collection of all transactions (buys, sells) related to this asset.",
+            "nullable": true
+          },
+          "fundManager": {
+            "type": "string",
+            "description": "Name of the fund manager.",
+            "nullable": true
+          },
+          "fundType": {
+            "enum": [
+              "ETF",
+              "Mutual",
+              "Index",
+              "Hedge",
+              "Other"
+            ],
+            "type": "string",
+            "description": "Type of fund (e.g., Index, Mutual)."
+          },
+          "expenseRatio": {
+            "type": "number",
+            "description": "Expense ratio percentage of the fund.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO representing a fund asset."
+      },
+      "PerformanceDto": {
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "type": "integer",
+            "description": "Identifier of the portfolio.",
+            "format": "int32"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "Start date of the performance period.",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "End date of the performance period.",
+            "format": "date-time"
+          },
+          "totalValue": {
+            "type": "number",
+            "description": "Total value of the portfolio at the end of the period.",
+            "format": "double"
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetPerformanceDto"
+            },
+            "description": "List of individual asset performance within the portfolio.",
+            "nullable": true
+          },
+          "valueOverTime": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValueOverTimeDto"
+            },
+            "description": "Historical portfolio value over time during the performance period.",
+            "nullable": true
+          },
+          "allocation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetAllocationDto"
+            },
+            "description": "Breakdown of the asset allocation within the portfolio.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Data transfer object representing the performance of a portfolio over a date range."
+      },
+      "PortfolioCreateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the portfolio name.",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "description": "Gets or sets the identifier of the customer who will own the portfolio.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO for creating a new portfolio."
+      },
+      "PortfolioDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the unique identifier of the portfolio.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the portfolio name.",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "description": "Gets or sets the identifier of the customer who owns the portfolio.",
+            "format": "int32"
+          },
+          "customer": {
+            "$ref": "#/components/schemas/CustomerDto"
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetDto"
+            },
+            "description": "Gets or sets the list of assets associated with the portfolio.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a portfolio belonging to a customer."
+      },
+      "PortfolioUpdateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the updated portfolio name.",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "description": "Gets or sets the updated customer identifier for the portfolio.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO for updating an existing portfolio."
+      },
+      "PortfolioWithAssetsDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the unique identifier of the portfolio.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the name of the portfolio.",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "description": "Gets or sets the identifier of the customer who owns the portfolio.",
+            "format": "int32"
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetDto"
+            },
+            "description": "Gets or sets the list of assets associated with this portfolio.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a portfolio along with its associated assets."
+      },
+      "StockCreateDto": {
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "type": "integer",
+            "description": "Portfolio ID to associate this asset with.",
+            "format": "int32"
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the asset.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "Stock",
+              "Bond",
+              "Fund"
+            ],
+            "type": "string",
+            "description": "Type of the asset."
+          },
+          "exchange": {
+            "type": "string",
+            "description": "Stock exchange where the stock is listed.",
+            "nullable": true
+          },
+          "sector": {
+            "type": "string",
+            "description": "Sector the stock belongs to.",
+            "nullable": true
+          },
+          "dividendYield": {
+            "type": "number",
+            "description": "Dividend yield percentage of the stock.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO for creating a stock asset."
+      },
+      "StockDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier of the asset.",
+            "format": "int32"
+          },
+          "portfolioId": {
+            "type": "integer",
+            "description": "Identifier of the portfolio this asset belongs to.",
+            "format": "int32"
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Ticker symbol of the asset.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the asset.",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "Stock",
+              "Bond",
+              "Fund"
+            ],
+            "type": "string",
+            "description": "Type of the asset (e.g., Stock, Bond, Fund)."
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionDto"
+            },
+            "description": "Collection of all transactions (buys, sells) related to this asset.",
+            "nullable": true
+          },
+          "exchange": {
+            "type": "string",
+            "description": "Stock exchange where the stock is listed.",
+            "nullable": true
+          },
+          "sector": {
+            "type": "string",
+            "description": "Sector the stock belongs to (e.g., Technology, Finance).",
+            "nullable": true
+          },
+          "dividendYield": {
+            "type": "number",
+            "description": "Dividend yield percentage of the stock.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO representing a stock asset."
+      },
+      "TransactionCreateDto": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "integer",
+            "description": "Gets or sets the identifier of the related asset.",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "description": "Gets or sets the date when the transaction occurred.",
+            "format": "date-time"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "Gets or sets the quantity of the asset transacted.",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "description": "Gets or sets the price per unit for the transaction.",
+            "format": "double"
+          },
+          "type": {
+            "enum": [
+              "Buy",
+              "Sell"
+            ],
+            "type": "string",
+            "description": "Gets or sets the type of transaction (e.g., Buy or Sell)."
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO for creating a new transaction for an asset."
+      },
+      "TransactionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the unique identifier of the transaction.",
+            "format": "int32"
+          },
+          "assetId": {
+            "type": "integer",
+            "description": "Gets or sets the identifier of the related asset.",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "description": "Gets or sets the date when the transaction occurred.",
+            "format": "date-time"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "Gets or sets the quantity of the asset transacted.",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "description": "Gets or sets the price per unit for the transaction.",
+            "format": "double"
+          },
+          "type": {
+            "enum": [
+              "Buy",
+              "Sell"
+            ],
+            "type": "string",
+            "description": "Gets or sets the type of transaction (e.g., Buy or Sell)."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a transaction record for an asset."
+      },
+      "TransactionUpdateDto": {
+        "required": [
+          "date",
+          "price",
+          "quantity",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "quantity": {
+            "type": "integer",
+            "description": "Gets or sets the quantity of the asset transacted.",
+            "format": "int32"
+          },
+          "price": {
+            "type": "number",
+            "description": "Gets or sets the price per unit for the transaction.",
+            "format": "double"
+          },
+          "type": {
+            "enum": [
+              "Buy",
+              "Sell"
+            ],
+            "type": "string",
+            "description": "Gets or sets the type of transaction (e.g., Buy or Sell)."
+          },
+          "date": {
+            "type": "string",
+            "description": "Gets or sets the date when the transaction occurred.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DTO for updating transaction for an asset."
+      },
+      "ValueOverTimeDto": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Date of the valuation.",
+            "format": "date-time"
+          },
+          "value": {
+            "type": "number",
+            "description": "Total value of the portfolio on that date.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents portfolio value on a specific date."
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Assets",
+      "description": "API controller for managing assets, including stocks, bonds, and funds."
+    },
+    {
+      "name": "Customers",
+      "description": "API controller for managing customers and their associated portfolios."
+    },
+    {
+      "name": "Performance",
+      "description": "API controller for retrieving portfolio performance data."
+    },
+    {
+      "name": "Portfolios",
+      "description": "API controller for managing investment portfolios."
+    }
+  ]
+}
