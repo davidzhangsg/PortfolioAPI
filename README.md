@@ -96,8 +96,13 @@ This API is built using **ASP.NET Core**, **Entity Framework Core**, and **SQLit
    
    cd PortfolioAPI
    
-3. Run the API   
+2. Run the API
+
    dotnet run --project PortfolioAPI
+
+4. Run unit and integration tests
+   
+   dotnet test
 
    
 
