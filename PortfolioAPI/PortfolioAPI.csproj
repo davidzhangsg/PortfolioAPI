@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <WarningsAsErrors>false</WarningsAsErrors>
     <ImplicitUsings>enable</ImplicitUsings>
 	<!-- Required for integration tests -->
 	<PreserveCompilationContext>true</PreserveCompilationContext>
