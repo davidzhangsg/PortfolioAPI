@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D6704E45-7F3D-466A-9A13-62E512D30085}|PortfolioAPI\\PortfolioAPI.csproj|c:\\git\\portfolioapi\\portfolioapi\\portfolioapi\\logs\\log.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D6704E45-7F3D-466A-9A13-62E512D30085}|PortfolioAPI\\PortfolioAPI.csproj|solutionrelative:portfolioapi\\logs\\log.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D6704E45-7F3D-466A-9A13-62E512D30085}|PortfolioAPI\\PortfolioAPI.csproj|c:\\git\\portfolioapi\\portfolioapi\\portfolioapi\\portfolioapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D6704E45-7F3D-466A-9A13-62E512D30085}|PortfolioAPI\\PortfolioAPI.csproj|solutionrelative:portfolioapi\\portfolioapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -178,32 +182,32 @@
       "DocumentGroups": [
         {
           "DockedHeight": 231,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AssetService.cs",
-              "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\AssetService.cs",
-              "RelativeDocumentMoniker": "PortfolioAPI\\Services\\AssetService.cs",
-              "ToolTip": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\AssetService.cs",
-              "RelativeToolTip": "PortfolioAPI\\Services\\AssetService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T14:32:49.402Z",
+              "DocumentIndex": 0,
+              "Title": "Log.txt",
+              "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Logs\\Log.txt",
+              "RelativeDocumentMoniker": "PortfolioAPI\\Logs\\Log.txt",
+              "ToolTip": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Logs\\Log.txt",
+              "RelativeToolTip": "PortfolioAPI\\Logs\\Log.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-12T02:57:51.702Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PerformanceService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\PerformanceService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Services\\PerformanceService.cs",
@@ -211,12 +215,11 @@
               "RelativeToolTip": "PortfolioAPI\\Services\\PerformanceService.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAAAYwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T02:03:07.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T02:03:07.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PortfolioService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\PortfolioService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Services\\PortfolioService.cs",
@@ -224,12 +227,11 @@
               "RelativeToolTip": "PortfolioAPI\\Services\\PortfolioService.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAkwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T06:09:59.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T06:09:59.564Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TransactionService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\TransactionService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Services\\TransactionService.cs",
@@ -237,12 +239,11 @@
               "RelativeToolTip": "PortfolioAPI\\Services\\TransactionService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAADwvycAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T07:27:50.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T07:27:50.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AssetControllerTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Integration\\AssetControllerTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Integration\\AssetControllerTests.cs",
@@ -250,12 +251,11 @@
               "RelativeToolTip": "PortfolioAPI.Tests\\Integration\\AssetControllerTests.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAYwDQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T13:24:53.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T13:24:53.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CustomerControllerTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Integration\\CustomerControllerTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Integration\\CustomerControllerTests.cs",
@@ -263,12 +263,11 @@
               "RelativeToolTip": "PortfolioAPI.Tests\\Integration\\CustomerControllerTests.cs",
               "ViewState": "AgIAACwAAAAAAAAAAADwv0QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T01:20:58.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T01:20:58.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PerformanceControllerTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Integration\\PerformanceControllerTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Integration\\PerformanceControllerTests.cs",
@@ -276,12 +275,11 @@
               "RelativeToolTip": "PortfolioAPI.Tests\\Integration\\PerformanceControllerTests.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAYwFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T14:30:49.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T14:30:49.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PerformanceController.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Controllers\\PerformanceController.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Controllers\\PerformanceController.cs",
@@ -289,12 +287,11 @@
               "RelativeToolTip": "PortfolioAPI\\Controllers\\PerformanceController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAADwvy8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T15:08:29.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T15:08:29.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Enum.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Models\\Enum.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Models\\Enum.cs",
@@ -302,12 +299,11 @@
               "RelativeToolTip": "PortfolioAPI\\Models\\Enum.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:43:03.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:43:03.105Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CustomWebApplicationFactory.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\CustomWebApplicationFactory.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\CustomWebApplicationFactory.cs",
@@ -315,12 +311,11 @@
               "RelativeToolTip": "PortfolioAPI.Tests\\CustomWebApplicationFactory.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwB8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T14:03:33.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T14:03:33.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PortfolioAPI.csproj",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj",
               "RelativeDocumentMoniker": "PortfolioAPI\\PortfolioAPI.csproj",
@@ -337,7 +332,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
+              "Title": "AssetService.cs",
+              "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\AssetService.cs",
+              "RelativeDocumentMoniker": "PortfolioAPI\\Services\\AssetService.cs",
+              "ToolTip": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\AssetService.cs",
+              "RelativeToolTip": "PortfolioAPI\\Services\\AssetService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T14:32:49.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PortfolioControllerTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Integration\\PortfolioControllerTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Integration\\PortfolioControllerTests.cs",
@@ -345,12 +352,11 @@
               "RelativeToolTip": "PortfolioAPI.Tests\\Integration\\PortfolioControllerTests.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAADgv0gAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T14:30:18.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T14:30:18.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Services\\CustomerService.cs",
@@ -358,12 +364,11 @@
               "RelativeToolTip": "PortfolioAPI\\Services\\CustomerService.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwBcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T01:18:47.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T01:18:47.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "TransactionController.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Controllers\\TransactionController.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Controllers\\TransactionController.cs",
@@ -371,12 +376,11 @@
               "RelativeToolTip": "PortfolioAPI\\Controllers\\TransactionController.cs",
               "ViewState": "AgIAAKUAAAAAAAAAAADwv7oAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T15:10:02.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T15:10:02.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PortfolioController.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Controllers\\PortfolioController.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Controllers\\PortfolioController.cs",
@@ -384,12 +388,11 @@
               "RelativeToolTip": "PortfolioAPI\\Controllers\\PortfolioController.cs",
               "ViewState": "AgIAAHoAAAAAAAAAAAAwwIsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T15:09:09.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T15:09:09.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Controllers\\CustomerController.cs",
@@ -397,12 +400,11 @@
               "RelativeToolTip": "PortfolioAPI\\Controllers\\CustomerController.cs",
               "ViewState": "AgIAAHsAAAAAAAAAAADwv5AAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T01:19:08.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T01:19:08.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\DbContext\\SeedData.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\DbContext\\SeedData.cs",
@@ -410,12 +412,11 @@
               "RelativeToolTip": "PortfolioAPI\\DbContext\\SeedData.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAAwBAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T14:16:39.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T14:16:39.826Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ErrorHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Middleware\\ErrorHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Middleware\\ErrorHandlingMiddleware.cs",
@@ -423,12 +424,11 @@
               "RelativeToolTip": "PortfolioAPI\\Middleware\\ErrorHandlingMiddleware.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwCQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:26:14.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:26:14.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "AssetServiceTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Unit\\AssetServiceTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Unit\\AssetServiceTests.cs",
@@ -436,12 +436,11 @@
               "RelativeToolTip": "PortfolioAPI.Tests\\Unit\\AssetServiceTests.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAwwIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T01:48:45.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T01:48:45.859Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AssetController.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Controllers\\AssetController.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Controllers\\AssetController.cs",
@@ -449,12 +448,11 @@
               "RelativeToolTip": "PortfolioAPI\\Controllers\\AssetController.cs",
               "ViewState": "AgIAALIAAAAAAAAAAADwv8UAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T15:04:38.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T15:04:38.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "DbContext.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\DbContext\\DbContext.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\DbContext\\DbContext.cs",
@@ -462,12 +460,11 @@
               "RelativeToolTip": "PortfolioAPI\\DbContext\\DbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T01:09:02.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T01:09:02.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "IAssetService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Interfaces\\IAssetService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Interfaces\\IAssetService.cs",
@@ -475,12 +472,11 @@
               "RelativeToolTip": "PortfolioAPI\\Interfaces\\IAssetService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T06:53:55.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T06:53:55.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "TransactionServiceTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Unit\\TransactionServiceTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Unit\\TransactionServiceTests.cs",
@@ -488,12 +484,11 @@
               "RelativeToolTip": "PortfolioAPI.Tests\\Unit\\TransactionServiceTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T01:49:00.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T01:49:00.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Model.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Models\\Model.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Models\\Model.cs",
@@ -501,12 +496,11 @@
               "RelativeToolTip": "PortfolioAPI\\Models\\Model.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwDYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T01:05:33.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T01:05:33.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "TransactionDto.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Dtos\\TransactionDto.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Dtos\\TransactionDto.cs",
@@ -518,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Profiles\\MappingProfile.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Profiles\\MappingProfile.cs",
@@ -526,12 +520,11 @@
               "RelativeToolTip": "PortfolioAPI\\Profiles\\MappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T15:27:00.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T15:27:00.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "ITransactionService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Interfaces\\ITransactionService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Interfaces\\ITransactionService.cs",
@@ -543,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "TransactionControllerTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Integration\\TransactionControllerTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Integration\\TransactionControllerTests.cs",
@@ -555,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "PortfolioServiceTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Unit\\PortfolioServiceTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Unit\\PortfolioServiceTests.cs",
@@ -567,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "PerformanceServiceTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Unit\\PerformanceServiceTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Unit\\PerformanceServiceTests.cs",
@@ -579,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "CustomerServiceTests.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\Unit\\CustomerServiceTests.cs",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\Unit\\CustomerServiceTests.cs",
@@ -591,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Program.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Program.cs",
@@ -603,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "PerformanceDto.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Dtos\\PerformanceDto.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Dtos\\PerformanceDto.cs",
@@ -615,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "IPortfolioService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Interfaces\\IPortfolioService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Interfaces\\IPortfolioService.cs",
@@ -627,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "CustomerDto.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Dtos\\CustomerDto.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Dtos\\CustomerDto.cs",
@@ -639,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "PortfolioDto.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Dtos\\PortfolioDto.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Dtos\\PortfolioDto.cs",
@@ -651,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "AssetDto.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Dtos\\AssetDto.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Dtos\\AssetDto.cs",
@@ -663,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\DbContext\\IRepository.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\DbContext\\IRepository.cs",
@@ -675,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ICustomerService.cs",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\Interfaces\\ICustomerService.cs",
               "RelativeDocumentMoniker": "PortfolioAPI\\Interfaces\\ICustomerService.cs",
@@ -687,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI\\appsettings.json",
               "RelativeDocumentMoniker": "PortfolioAPI\\appsettings.json",
@@ -699,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "xunit.runner.json",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\xunit.runner.json",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\xunit.runner.json",
@@ -711,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "PortfolioAPI.Tests.csproj",
               "DocumentMoniker": "C:\\GIT\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.Tests\\PortfolioAPI.Tests.csproj",
               "RelativeDocumentMoniker": "PortfolioAPI.Tests\\PortfolioAPI.Tests.csproj",
@@ -721,6 +714,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-07-10T13:22:21.959Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         },
