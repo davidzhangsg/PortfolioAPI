@@ -95,12 +95,20 @@ This API is built using **ASP.NET Core**, **Entity Framework Core**, and **SQLit
    git clone https://github.com/davidzhangsg/PortfolioAPI.git
    
    cd PortfolioAPI
+
+2. Restore Dependencies
    
-2. Run the API
+   dotnet restore
 
-   dotnet run --project PortfolioAPI
+3. Run the API
 
-4. Run unit and integration tests
+   dotnet run --launch-profile "https" --project PortfolioAPI
+
+4. Web API is running
+   
+   https://localhost:7019/swagger/index.html
+
+6. Run unit and integration tests
    
    dotnet test
 
